@@ -1,0 +1,285 @@
+@font-face {
+  font-family: Pangram Sans Rounded;
+  src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Bold.otf');
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: Pangram Sans Rounded;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-margin-top: 2rem;
+}
+
+/* header navbar */
+.navbar-light {
+  background-color: #0f1233;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white !important;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url('/images/toggle_navbar.png');
+}
+/* Content header */
+.page-content p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url('/images/bg-banner.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 40px;
+}
+
+.banner .color_mode {
+  color: #fdd01b;
+}
+
+.color_modes {
+  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow-y: auto;
+}
+
+.banner .btn_join {
+  background: #fdd01b;
+  border-radius: 40px;
+  display: inline-block;
+  padding: 10px;
+  color: #1d193a;
+}
+
+/* section down scroll */
+.down_scroll {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* content about */
+.about {
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url('/images/bg-section2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about .about_content p {
+  color: #fdd01b;
+}
+
+.about .about_content-end a.btn.text-light {
+  border: 1px solid transparent;
+  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.about_content-end .image-super {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(60%, -50%);
+}
+
+/* content nft */
+.nft_token .nft_token--carousel .swiper.swiper_carousel {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+.nft_token .nft_token--carousel .swiper_content img {
+  border-radius: 17px;
+}
+
+.nft_token .nft_token--carousel .swiper-button-next,
+.nft_token .nft_token--carousel .swiper-button-prev {
+  top: 110%;
+  bottom: 0;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .nft_token .nft_token--carousel .swiper-button-next,
+  .nft_token .nft_token--carousel .swiper-button-prev {
+    top: 105%;
+  }
+}
+.nft_token .nft_token--carousel .swiper-button-prev {
+  left: 45%;
+}
+
+.nft_token .nft_token--carousel .swiper-button-next {
+  right: 45%;
+}
+@media (max-width: 991px) {
+  .nft_token .nft_token--carousel .swiper-button-prev {
+    left: 30%;
+  }
+
+  .nft_token .nft_token--carousel .swiper-button-next {
+    right: 30%;
+  }
+}
+.nft_token .nft_token--carousel .swiper-button-prev a,
+.nft_token .nft_token--carousel .swiper-button-next a {
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  padding: 0 19px;
+  transition: 0.3s ease-in;
+}
+.nft_token .nft_token--carousel .swiper-button-prev a:hover,
+.nft_token .nft_token--carousel .swiper-button-next a:hover {
+  border: none;
+  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  transition: 0.3s ease-in;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+/* content partner, nft, tokenomic, roadmap */
+.nft_token,
+.partner,
+.roadmap,
+.tokenomic {
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url('/images/bg-section.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* content roadmap */
+.roadmap .module_border-wrap {
+  position: relative;
+  background: linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  padding: 1px;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+.roadmap .module_border-wrap .module {
+  background: #1d193a;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.roadmap .module_border-wrap .module li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* content charity */
+.charity {
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url('/images/bg-section5.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+}
+
+.charity .btn.btn_charity {
+  border: 1px solid transparent;
+  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65px;
+  color: white;
+}
+
+.charity .carousel-item {
+  text-align: -webkit-center;
+}
+
+.charity .carousel .carousel-control-next {
+  right: 5%;
+  opacity: 1;
+}
+
+.charity .carousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 0;
+  border-bottom: none;
+  border-radius: 50px;
+  background-clip: initial;
+}
+
+/* footer */
+.footer {
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url('/images/bg-section.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer .footer_copyright {
+  border-top: 1px solid #352c78;
+}
+
+.footer .footer_copyright .text {
+  color: #828282;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Disable smooth scrolling when users have prefers-reduced-motion enabled   */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
