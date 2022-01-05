@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800;900&display=swap');
 @font-face {
   font-family: Pangram Sans Rounded;
   src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Bold.otf');
@@ -6,7 +7,7 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: Pangram Sans Rounded;
+  font-family: 'Nunito', sans-serif;
 }
 
 html {
@@ -17,6 +18,35 @@ html {
   scroll-margin-top: 2rem;
 }
 
+/* text color */
+.text-gray {
+  color: #bdbdbd;
+}
+.font-family-pp {
+  font-family: Pangram Sans Rounded;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
 /* header navbar */
 .navbar-light {
   background-color: #0f1233;
@@ -24,15 +54,14 @@ html {
 
 .navbar-light .navbar-nav .nav-link {
   color: white !important;
+  font-weight: 100;
 }
+
 .navbar-light .navbar-toggler-icon {
   background-image: url('/images/toggle_navbar.png');
 }
-/* Content header */
-.page-content p {
-  font-family: 'Open Sans', sans-serif;
-}
 
+/* Content header */
 .banner {
   display: block;
   width: 100%;
@@ -49,6 +78,7 @@ html {
 .banner h1 {
   color: white;
   font-size: 40px;
+  font-weight: 900;
 }
 
 .banner .color_mode {
@@ -56,17 +86,16 @@ html {
 }
 
 .color_modes {
-  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  background: -webkit-linear-gradient(286deg, #fdd01b 3.59%, #ef2a24 89.38%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  overflow-y: auto;
 }
 
 .banner .btn_join {
   background: #fdd01b;
   border-radius: 40px;
   display: inline-block;
-  padding: 10px;
+  padding: 13px 25px;
   color: #1d193a;
 }
 
@@ -79,27 +108,46 @@ html {
 }
 
 /* content about */
-.about {
-  display: block;
-  width: 100%;
-  transform-origin: top;
-  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  background-image: url('/images/bg-section2.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+@media (min-width: 992px) {
+  .about .about_content p {
+    color: #fdd01b;
+    padding: 0px 100px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about .about_content p {
+    color: #fdd01b;
+  }
 }
 
-.about .about_content p {
-  color: #fdd01b;
+/* content super_Bull */
+@media (min-width: 1199.98px) {
+  .super_Bull {
+    /* background-image: url('/images/bg-section2.png'); */
+    background-image: url('/images/bg-section.png');
+  }
 }
 
-.about .about_content-end a.btn.text-light {
-  border: 1px solid transparent;
-  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+@media (max-width: 1199px) {
+  .super_Bull {
+    display: block;
+    width: 100%;
+    transform-origin: top;
+    -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1)
+      forwards;
+    animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    background-image: url('/images/bg-section.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.super_Bull .super_Bull_content a.btn.text-light {
+  border: none;
+  background: -webkit-linear-gradient(286deg, #fdd01b 3.59%, #ef2a24 89.38%);
   border-radius: 50px;
   width: 80px;
   height: 80px;
@@ -108,11 +156,31 @@ html {
   padding-top: 25px;
 }
 
-.about_content-end .image-super {
+.super_Bull_content .image-super {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(60%, -50%);
+  transform: translate(85%, -55%);
+}
+.super_Bull_content .image-super img {
+  font-size: 200px;
+}
+
+.super_Bull_content--block {
+  margin-top: 7rem;
+}
+
+/* down_scrolls */
+.down_scrolls {
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  background-image: url('/images/bg-section.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* content nft */
@@ -162,7 +230,7 @@ html {
 .nft_token .nft_token--carousel .swiper-button-prev a:hover,
 .nft_token .nft_token--carousel .swiper-button-next a:hover {
   border: none;
-  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  background: -webkit-linear-gradient(286deg, #fdd01b 3.59%, #ef2a24 89.38%);
   transition: 0.3s ease-in;
 }
 
@@ -172,6 +240,7 @@ html {
 }
 
 /* content partner, nft, tokenomic, roadmap */
+.about,
 .nft_token,
 .partner,
 .roadmap,
@@ -181,7 +250,7 @@ html {
   transform-origin: top;
   -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  background-image: url('/images/bg-section.jpg');
+  background-image: url('/images/bg-section.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -189,6 +258,10 @@ html {
   padding-bottom: 3rem;
 }
 
+/* tokenomic */
+.tokenomic {
+  padding-top: 6rem;
+}
 /* content roadmap */
 .roadmap .module_border-wrap {
   position: relative;
@@ -205,10 +278,6 @@ html {
   border-radius: 10px;
 }
 
-.roadmap .module_border-wrap .module li {
-  font-family: 'Open Sans', sans-serif;
-}
-
 /* content charity */
 .charity {
   display: block;
@@ -216,7 +285,7 @@ html {
   transform-origin: top;
   -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  background-image: url('/images/bg-section5.jpg');
+  background-image: url('/images/bg-section5.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -226,14 +295,14 @@ html {
 }
 
 .charity .btn.btn_charity {
-  border: 1px solid transparent;
-  background: -webkit-linear-gradient(131.65deg, #fdd01b 3.59%, #ef2a24 89.38%);
+  border: none;
+  background: -webkit-linear-gradient(286deg, #fdd01b 3.59%, #ef2a24 89.38%);
   border-radius: 100%;
   width: 180px;
   height: 180px;
   justify-content: center;
   align-items: center;
-  padding-top: 65px;
+  padding-top: 75px;
   color: white;
 }
 
@@ -261,7 +330,7 @@ html {
   transform-origin: top;
   -webkit-animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  background-image: url('/images/bg-section.jpg');
+  background-image: url('/images/bg-section.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -274,7 +343,6 @@ html {
 .footer .footer_copyright .text {
   color: #828282;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled   */
@@ -282,4 +350,12 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* telegram sticky top */
+.tlg_sticky {
+  position: fixed;
+  bottom: 2%;
+  right: 0;
+  z-index: 999;
 }
