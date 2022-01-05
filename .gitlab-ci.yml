@@ -14,7 +14,6 @@ services:
   before_script:
     - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
   script:
-    - docker pull $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_REGISTRY || true
     - docker build -t $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA .
     - docker push $CI_REGISTRY_IMAGE:$ENVIRONMENT-$CI_COMMIT_SHORT_SHA
 build-dev:
