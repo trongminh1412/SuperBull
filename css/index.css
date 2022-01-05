@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800;900&display=swap');
 @font-face {
-  font-family: Pangram Sans Rounded;
-  src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Bold.otf');
+  font-family: PP Pangram Sans Rounded;
+  /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Bold.otf'); */
+  src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-CompressedExtrabold.otf');
+  /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-NarrowSemibold.otf'); */
+  /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Semibold.otf'); */
 }
 
 html,
@@ -17,13 +20,19 @@ html {
 .section {
   scroll-margin-top: 2rem;
 }
+@media (min-width: 992px) {
+  h1 {
+    font-size: 60px;
+  }
+}
 
 /* text color */
 .text-gray {
   color: #bdbdbd;
 }
 .font-family-pp {
-  font-family: Pangram Sans Rounded;
+  font-family: PP Pangram Sans Rounded;
+  letter-spacing: 1.5px;
 }
 .fw-200 {
   font-weight: 200;
@@ -47,6 +56,12 @@ html {
   font-weight: 900;
 }
 
+.fs-18 {
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
 /* header navbar */
 .navbar-light {
   background-color: #0f1233;
@@ -77,7 +92,6 @@ html {
 
 .banner h1 {
   color: white;
-  font-size: 40px;
   font-weight: 900;
 }
 
@@ -109,9 +123,12 @@ html {
 
 /* content about */
 @media (min-width: 992px) {
+  .about .about_content {
+    max-width: 720px !important;
+  }
+
   .about .about_content p {
     color: #fdd01b;
-    padding: 0px 100px;
   }
 }
 @media (max-width: 991.98px) {
@@ -148,28 +165,41 @@ html {
 .super_Bull .super_Bull_content a.btn.text-light {
   border: none;
   background: -webkit-linear-gradient(286deg, #fdd01b 3.59%, #ef2a24 89.38%);
-  border-radius: 50px;
-  width: 80px;
-  height: 80px;
+  border-radius: 100px;
+  width: 137px;
+  height: 137px;
   justify-content: center;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 55px;
+  margin-right: 10px;
+}
+@media (max-width: 991.98px) {
+  .super_Bull .super_Bull_content a.btn.text-light {
+    width: 90px;
+    height: 90px;
+    padding-top: 30px;
+  }
 }
 
 .super_Bull_content .image-super {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(85%, -55%);
+  transform: translate(65%, -50%);
 }
+
 .super_Bull_content .image-super img {
-  font-size: 200px;
+  width: 150%;
 }
 
-.super_Bull_content--block {
-  margin-top: 7rem;
+@media (min-width: 992px) {
+  .super_Bull_content--block {
+    margin-top: 7rem;
+  }
+  .super_Bull_content--block .text-super {
+    width: 35rem;
+  }
 }
-
 /* down_scrolls */
 .down_scrolls {
   display: block;
@@ -289,11 +319,15 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 1rem;
   padding-top: 3rem;
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
 }
 
+@media (max-width: 767.98px) {
+  .charity {
+    background-image: url('/images/charity2.png');
+  }
+}
 .charity .btn.btn_charity {
   border: none;
   background: -webkit-linear-gradient(286deg, #fdd01b 3.59%, #ef2a24 89.38%);
