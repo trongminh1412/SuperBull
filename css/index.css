@@ -1,11 +1,16 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800;900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 @font-face {
-  font-family: PP Pangram Sans Rounded;
-  /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Bold.otf'); */
-  src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-CompressedExtrabold.otf');
+  font-family: PP Pangram Sans Roundeds;
+  src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Bold.otf');
+  /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-CompressedExtrabold.otf'); */
   /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-NarrowSemibold.otf'); */
   /* src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-Semibold.otf'); */
+}
+@font-face {
+  font-family: PP Pangram Sans Rounded;
+  src: url('/font/Pangram_Sans_Rounded/PPPangramSansRounded-CompressedExtrabold.otf');
 }
 
 html,
@@ -35,6 +40,10 @@ html {
   font-family: PP Pangram Sans Rounded;
   letter-spacing: 1.5px;
 }
+.font-family-pps {
+  font-family: PP Pangram Sans Roundeds;
+  letter-spacing: 1.5px;
+}
 .fw-200 {
   font-weight: 200;
 }
@@ -56,23 +65,23 @@ html {
 .fw-900 {
   font-weight: 900;
 }
-
 .fs-18 {
   font-size: 18px;
 }
 .fs-20 {
   font-size: 20px;
 }
-/* header navbar */
-#header-nav {
-  transition: all 0.5s ease;
+.w-90 {
+  width: 90% !important;
 }
+/* header navbar */
 #header-nav.fixed-top {
   position: fixed;
   background: #091030 !important;
   padding-top: 0.36em;
   padding-bottom: 0.36em;
 }
+
 .navbar-light {
   background-color: #0f1233;
 }
@@ -84,6 +93,14 @@ html {
 
 .navbar-light .navbar-toggler-icon {
   background-image: url('/images/toggle_navbar.png');
+}
+@media (max-width: 991.98px) {
+  .navbar-light .navbar-nav {
+    text-align: center;
+  }
+  .navbar-light .navbar-nav .nav-item:not(:last-child) {
+    border-bottom: 1px solid #352c78;
+  }
 }
 
 /* Content header */
@@ -178,11 +195,11 @@ html {
   border-radius: 100px;
   width: 137px;
   height: 137px;
+  font-size: 24px;
   justify-content: center;
   align-items: center;
-  padding-top: 48px;
+  padding-top: 47px;
   margin-right: 10px;
-  font-size: 24px;
 }
 @media (max-width: 991.98px) {
   .super_Bull .super_Bull_content a.btn.text-light {
@@ -196,7 +213,7 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(65%, -50%);
+  transform: translate(50%, -58%);
 }
 
 .super_Bull_content .image-super img {
@@ -208,7 +225,9 @@ html {
     margin-top: 7rem;
   }
   .super_Bull_content--block .text-super {
-    width: 35rem;
+    width: 85%;
+    padding-left: 3rem;
+    padding-right: 5rem;
   }
 }
 /* down_scrolls */
@@ -303,6 +322,25 @@ html {
 .tokenomic {
   padding-top: 6rem;
 }
+@media (max-width: 575.98px) {
+  .image_title {
+    width: 35%;
+  }
+  .image_titles {
+    width: 30%;
+  }
+}
+@media (min-width: 576px) {
+  .image_title,
+  .image_titles {
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .image_titles {
+    width: 100% !important;
+  }
+}
 /* content roadmap */
 .roadmap .module_border-wrap {
   position: relative;
@@ -334,7 +372,7 @@ html {
   padding-bottom: 8rem;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .charity {
     background-image: url('/images/charity2.png');
   }
@@ -347,7 +385,7 @@ html {
   height: 180px;
   justify-content: center;
   align-items: center;
-  padding-top: 75px;
+  padding-top: 77px;
   color: white;
 }
 
@@ -366,6 +404,10 @@ html {
   border-bottom: none;
   border-radius: 50px;
   background-clip: initial;
+}
+
+.charity .carousel .carousel-indicators .active {
+  background-color: #f7921d;
 }
 
 /* footer */
@@ -389,7 +431,9 @@ html {
   color: #828282;
   font-size: 14px;
 }
-
+.footer tr {
+  border-style: hidden !important;
+}
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled   */
 @media screen and (prefers-reduced-motion: reduce) {
   html {
