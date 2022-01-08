@@ -34,4 +34,10 @@
       body.style.paddingTop = '0px';
     }
   };
+
+  const navLink = document.getElementsByClassName('nav-link');
+
+  navLink.addEventListener('click', function () {
+    document.getElementsByClassName('navbar-nav').classList.toggle('hide');
+  });
 })();
